@@ -1,0 +1,21 @@
+# Nmap 7.95 scan initiated Mon May 20 14:24:25 2024 as: nmap -vv -sS -oN certmikr-scan2-read2-sS.txt scan2.certmike.com
+Nmap scan report for scan2.certmike.com (18.213.123.154)
+Host is up, received syn-ack ttl 64 (0.088s latency).
+rDNS record for 18.213.123.154: ec2-18-213-123-154.compute-1.amazonaws.com
+Scanned at 2024-05-20 14:24:25 WEST for 16s
+Not shown: 989 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    REASON
+22/tcp   open   ssh        syn-ack ttl 240
+25/tcp   open   smtp       syn-ack ttl 64
+80/tcp   open   http       syn-ack ttl 64
+110/tcp  open   pop3       syn-ack ttl 64
+113/tcp  closed ident      reset ttl 64
+143/tcp  open   imap       syn-ack ttl 64
+443/tcp  open   https      syn-ack ttl 64
+465/tcp  closed smtps      reset ttl 240
+2000/tcp open   cisco-sccp syn-ack ttl 64
+5060/tcp open   sip        syn-ack ttl 64
+8010/tcp open   xmpp       syn-ack ttl 64
+
+Read data files from: /usr/local/bin/../share/nmap
+# Nmap done at Mon May 20 14:24:41 2024 -- 1 IP address (1 host up) scanned in 15.62 seconds
