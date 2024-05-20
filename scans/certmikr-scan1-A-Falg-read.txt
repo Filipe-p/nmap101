@@ -1,0 +1,50 @@
+# Nmap 7.95 scan initiated Mon May 20 15:00:03 2024 as: nmap -v -A -oN certmikr-scan1-A-Falg-read.txt scan1.certmike.com
+Nmap scan report for scan1.certmike.com (18.213.119.84)
+Host is up (0.0092s latency).
+rDNS record for 18.213.119.84: ec2-18-213-119-84.compute-1.amazonaws.com
+Not shown: 991 filtered tcp ports (no-response)
+PORT     STATE  SERVICE        VERSION
+25/tcp   open   smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp   open   http?
+| http-methods: 
+|   Supported Methods: HEAD GET POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+110/tcp  open   pop3?
+113/tcp  closed ident
+143/tcp  open   imap?
+443/tcp  open   ssl/http       Apache httpd 2.4.37 (() OpenSSL/1.0.2k-fips)
+| ssl-cert: Subject: commonName=ip-172-31-93-51.ec2.internal/organizationName=Unspecified/countryName=US
+| Subject Alternative Name: DNS:ip-172-31-93-51.ec2.internal
+| Issuer: commonName=FG6H1ETB22903032/organizationName=Fortinet/stateOrProvinceName=California/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-08-06T21:25:06
+| Not valid after:  2019-08-11T23:05:06
+| MD5:   03b3:c181:b4b1:6959:30c1:a100:6231:b0f8
+|_SHA-1: 70ec:fb26:6463:0522:7d94:54c8:114c:167d:c2f7:9d4c
+|_ssl-date: 2024-05-20T14:04:50+00:00; 0s from scanner time.
+|_http-title: Invalid Connection
+2000/tcp open   cisco-sccp?
+5060/tcp open   sip?
+8010/tcp open   ssl/http-proxy FortiGuard Web Filtering
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Web Filter Block Override
+|_ssl-date: 2024-05-20T14:04:50+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=scan1.certmike.com
+| Subject Alternative Name: DNS:scan1.certmike.com
+| Issuer: commonName=FG6H1ETB22903032/organizationName=Fortinet/stateOrProvinceName=California/countryName=US
+| Public Key type: ec
+| Public Key bits: 256
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-05-08T00:00:00
+| Not valid after:  2024-06-07T23:59:59
+| MD5:   4269:406e:61b6:f08b:0488:8c48:3eac:d984
+|_SHA-1: 5abb:c9e3:2f88:9c05:f2f4:650b:1487:39aa:ed1a:ad78
+
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 20 15:08:11 2024 -- 1 IP address (1 host up) scanned in 487.73 seconds
