@@ -48,8 +48,6 @@ $ nmap 192.168.1.0/29
 ```
 
 
-
-
 #### Host Discovery, DNS, TCP, UDP
 
 nmap has specific tuning to all of these. 
