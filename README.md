@@ -58,17 +58,63 @@ Specific to host discovery there are different ways to performe this that wield 
 You can send "SYN" connects but you can also ping or do some other methods to find the host. More reading needed on this area. 
 Some also need Admin rights
 
-
 #### DNS
 
-By default nmap uses the machine's DNS resolution. You can define a diferent one such as google's `8.8.8.8` or other. This will affect the `performance of the scan`. It is an area that can be fined tuned to make your scans more efficients
+By default nmap uses reverse DNS resolution. You can define a diferent one such as google's `8.8.8.8`, the machine DNS or other. This will affect the `performance of the scan`. It is an area that can be fined tuned to make your scans more efficients. 
+
+Standard namp uses reverse DNS
+
+```bash
+
+# Standard reverse DNS look up
+$ nmap 45.33.32.156
+>(...)
+> Nmap done: 1 IP address (1 host up) scanned in 59.03 seconds
+
+# Disabling the reverse DNS lookup
+$ nmap -n 45.33.32.156
+>(...)
+> Nmap done: 1 IP address (1 host up) scanned in 58.02 seconds
+
+# System reverse DNS lookup
+$ nmap --system-dns 45.33.32.156
+>(...)
+> Nmap done: 1 IP address (1 host up) scanned in 56.55 seconds
+
+
+# System specifc external DNS lookup
+$ nmap --dns-servers 8.8.8.8 45.33.32.156
+>(...)
+> Nmap done: 1 IP address (1 host up) scanned in 55.21 seconds
+```
+
 
 #### TCP & UDP 
 
 You can fine tune these areas. More reading needed
 
 
+#### PORT specific
 
+There are over 65,0000 ports. 65,535 to be exact. 
+It would be very time consuming to test all. By default Nmap test the most "1000" used ports.
+There are ways to specify a port
+
+```bash
+# Specify a port using -p
+nmap -p 80 45.33.32.156
+
+# Specify multiple ports
+nmap -p 80,443 45.33.32.156
+nmap -p http,https 45.33.32.156
+
+# Specify range
+nmap -p 80-1000 45.33.32.156
+
+# Fast 100 most used ports
+nmap -F 45.33.32.156
+
+```
 
 #### OS & Service Version Discover
 
@@ -81,7 +127,6 @@ $ namp -sV scan3.certmike.com
 $ namp -vV -sV -oN certmikr-scan2-os_discovery-read.txt scan2.certmike.com
 
 ```
-
 
 #### Speed / Throtle of Scanning
 
