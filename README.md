@@ -52,6 +52,23 @@ $ nmap 192.168.1.0/29
 
 #### Host Discovery, DNS, TCP, UDP
 
+nmap has specific tuning to all of these. 
+
+#### Host discovery 
+
+Specific to host discovery there are different ways to performe this that wield diferent resilts. 
+You can send "SYN" connects but you can also ping or do some other methods to find the host. More reading needed on this area. 
+Some also need Admin rights
+
+
+#### DNS
+
+By default nmap uses the machine's DNS resolution. You can define a diferent one such as google's `8.8.8.8` or other. This will affect the `performance of the scan`. It is an area that can be fined tuned to make your scans more efficients
+
+#### TCP & UDP 
+
+You can fine tune these areas. More reading needed
+
 
 
 
@@ -86,5 +103,7 @@ Easiest way is using timing templates
 $ nmap -T5 192.168.1.0/29  
 
 ```
+
+
 
 
