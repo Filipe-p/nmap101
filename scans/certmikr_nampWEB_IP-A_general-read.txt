@@ -1,3 +1,107 @@
 # Nmap 7.95 scan initiated Wed May 22 09:34:31 2024 as: nmap -vv -A -oN certmikr_nampWEB_IP-A_general-read.txt -iL /Users/ctw03699/code/nmap101/scans/scan_targets2.txt
 Nmap scan report for scan2.certmike.com (18.213.123.154) [host down, received no-response]
 Nmap scan report for scan3.certmike.com (18.213.203.4) [host down, received no-response]
+Increasing send delay for 45.33.32.156 from 5 to 10 due to 11 out of 30 dropped probes since last increase.
+Increasing send delay for 45.33.32.156 from 10 to 20 due to 14 out of 46 dropped probes since last increase.
+Nmap scan report for scan1.certmike.com (18.213.119.84)
+Host is up, received syn-ack (0.11s latency).
+rDNS record for 18.213.119.84: ec2-18-213-119-84.compute-1.amazonaws.com
+Scanned at 2024-05-22 09:34:33 WEST for 322s
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE  SERVICE     REASON       VERSION
+22/tcp   open   ssh         syn-ack      OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 86:6e:88:01:e3:e3:60:80:9c:da:9a:1f:33:ff:ab:dc (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDjZm2JMxIil3AKVSffnceU5qdKkz7Ayf+0iEKZKFXMTIGd9DoOtJxExzm6CaBH7JK0C04b0UJywQV6shpNjYcxCGpsgQ11+Shg9hY0QgBAzchyGIt28qs6hS9gLRST6uglzOoHmwQeHZOmQbZhBziQvUrxa9dZn/Atv2kLVAI2wqmwdm8mqgMyxFirujyqRvsZ9sO0o5O+/EW8UqZIz0TWzmKA4QXG+uz4Ycm8N4Kmtklm+BPsntB5jVLn8/b8zfQU0BrsP+YoNyYH4TzkCCHKkwyAeSu5KWuFSNcGcNkvz813LxSgUSyR6XWJkHk280KOUmZL2mzBJCNwaFWysaN1
+|   256 02:43:6d:e8:10:d2:5e:fa:4e:31:63:4c:50:9f:d4:a0 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGgi3C94c4nKigm9leFAW7aEkFMm4cscgXgehxIX8azezZ6W6KMRPg15O4lbMaSsUDhu40PuOWNtPs3ChQjvX0s=
+|   256 1d:8a:1a:51:bf:b0:20:c3:a4:5e:46:f4:0d:dc:f3:29 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICR55yJpAG72BmLeKzBc3NCakF0a/8bujoXlM6IzorjW
+80/tcp   open   http        syn-ack      Apache httpd 2.4.37 (() OpenSSL/1.0.2k-fips)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_http-server-header: Apache/2.4.37 () OpenSSL/1.0.2k-fips
+| http-methods: 
+|   Supported Methods: HEAD GET POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+113/tcp  closed ident       conn-refused
+443/tcp  open   ssl/http    syn-ack      Apache httpd 2.4.37 (() OpenSSL/1.0.2k-fips)
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache/2.4.37 () OpenSSL/1.0.2k-fips
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=ip-172-31-93-51.ec2.internal/organizationName=Unspecified/countryName=US/emailAddress=root@ip-172-31-93-51.ec2.internal
+| Subject Alternative Name: DNS:ip-172-31-93-51.ec2.internal
+| Issuer: commonName=ip-172-31-93-51.ec2.internal/organizationName=Unspecified/countryName=US/emailAddress=root@ip-172-31-93-51.ec2.internal/organizationalUnitName=ca-257111459991255141
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-08-06T21:25:06
+| Not valid after:  2019-08-11T23:05:06
+| MD5:   a706:f06a:6847:aa56:69e1:fa7e:c1c8:d86a
+| SHA-1: 3842:9587:5615:fdf8:9f80:9fc5:90ca:52b8:8eff:0357
+| -----BEGIN CERTIFICATE-----
+| MIIFAjCCAuqgAwIBAgIIH8+jjH+5NigwDQYJKoZIhvcNAQELBQAwgZwxCzAJBgNV
+| BAYTAlVTMRQwEgYDVQQKDAtVbnNwZWNpZmllZDEeMBwGA1UECwwVY2EtMjU3MTEx
+| NDU5OTkxMjU1MTQxMSUwIwYDVQQDDBxpcC0xNzItMzEtOTMtNTEuZWMyLmludGVy
+| bmFsMTAwLgYJKoZIhvcNAQkBFiFyb290QGlwLTE3Mi0zMS05My01MS5lYzIuaW50
+| ZXJuYWwwHhcNMTgwODA2MjEyNTA2WhcNMTkwODExMjMwNTA2WjB8MQswCQYDVQQG
+| EwJVUzEUMBIGA1UECgwLVW5zcGVjaWZpZWQxJTAjBgNVBAMMHGlwLTE3Mi0zMS05
+| My01MS5lYzIuaW50ZXJuYWwxMDAuBgkqhkiG9w0BCQEWIXJvb3RAaXAtMTcyLTMx
+| LTkzLTUxLmVjMi5pbnRlcm5hbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+| ggEBALo45AjbGeu1afykGv4kOimNBICUKTR4TeqJLtCzR+A0CihUkGtX3dcTvmtH
+| qzGCaTw4ZppzIvvHB+faPIo/sc1n0/yUUtPqid64XF7jID1J2/xwktq1D/yW7ZuD
+| Ukekmys5zgXQWDW7B/BFm8gqPlwWR+uvPf8tEgWRY70s7c20VjlxQsDp389JYrSv
+| 5MFkW3K0dRwBcNJLzNvMclRxTys3a28MkgbuW0HlDPFHc4mg1UB1CQRhHdTgW7hK
+| VhqEvKT8sL9S2gyAyZANaxIZEPcslDZLF8U0xKaS8Rn2yIAqBdJ96U+q23WNJCQW
+| KsH9PIx0ZzdZ11JM8PwIcrSKooECAwEAAaNnMGUwDgYDVR0PAQH/BAQDAgWgMAkG
+| A1UdEwQCMAAwJwYDVR0RBCAwHoIcaXAtMTcyLTMxLTkzLTUxLmVjMi5pbnRlcm5h
+| bDAfBgNVHSMEGDAWgBRSQt9ctPXJXMCe+b6Sw0y/LQo0PDANBgkqhkiG9w0BAQsF
+| AAOCAgEAOYXolYeRxaV9yrMVkgIhh2BBkrqIHL8Ja74ra0fnXFLOszMUrezfVeCY
+| RmL+LOV8xYkoONCWE6ua9E7UlpRrRB/2gNm122JjTuTdeIAz414knZzJthjd18Y3
+| VzESnL3pWDh4028Bpi7vEamOLldGazUbZqNM2h9cv1duM15bAZot9YsTRt1HHczd
+| xVhrCS1hgI+yByROCTSb9HLHuv3GM/gVO2dyqyoEBLrkKZBOV76ZTAn8zK6XeodM
+| ZnrmNWpebyPrGaz7vR2shTfQsG9GFpuED8eEYbb2M9vJCmn6LT1oYwNx+0zcpBFo
+| q8+/TXxik5NBjc3GZhXw8NLH9v1e4TfyMZNnq+r878QkX/h6syacUJI5feWfq2i/
+| 6EfDJP81qJoWsbowr8ZXIYWx58Dqi0Bbe4ldii5xLrNEzdZVN+vWs+vsCoDBksYP
+| 4lAJi3bgNCKs5CN+EBkurITBrBMWEFFpBwEWfpDfaBE4T9qX8tRbD/q51OoBAZrT
+| YMG8Q6CsBnOqKLKpf3c6TtmuRr51tQExQfJFiu2MS9ZF8x1nl80i6B/uqt9TdreQ
+| XyJId/e7eVK3ARjpb2dxneLAwRnQsskqdM4lDX7l2ucJ65BC04QrkJNsB6TVcPlv
+| G3CmP4oncxSSss3T81S0dmUjqj+AP9Z5wCMVRs2zgERKs0TqsF8=
+|_-----END CERTIFICATE-----
+| http-methods: 
+|   Supported Methods: HEAD GET POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+2000/tcp open   cisco-sccp? syn-ack
+5060/tcp open   sip?        syn-ack
+
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up, received syn-ack (0.18s latency).
+Scanned at 2024-05-22 09:34:33 WEST for 322s
+Not shown: 994 closed tcp ports (conn-refused)
+PORT      STATE SERVICE    REASON  VERSION
+22/tcp    open  ssh        syn-ack OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 ac:00:a0:1a:82:ff:cc:55:99:dc:67:2b:34:97:6b:75 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAOe8o59vFWZGaBmGPVeJBObEfi1AR8yEUYC/Ufkku3sKhGF7wM2m2ujIeZDK5vqeC0S5EN2xYo6FshCP4FQRYeTxD17nNO4PhwW65qAjDRRU0uHFfSAh5wk+vt4yQztOE++sTd1G9OBLzA8HO99qDmCAxb3zw+GQDEgPjzgyzGZ3AAAAFQCBmE1vROP8IaPkUmhM5xLFta/xHwAAAIEA3EwRfaeOPLL7TKDgGX67Lbkf9UtdlpCdC4doMjGgsznYMwWH6a7Lj3vi4/KmeZZdix6FMdFqq+2vrfT1DRqx0RS0XYdGxnkgS+2g333WYCrUkDCn6RPUWR/1TgGMPHCj7LWCa1ZwJwLWS2KX288Pa2gLOWuhZm2VYKSQx6NEDOIAAACBANxIfprSdBdbo4Ezrh6/X6HSvrhjtZ7MouStWaE714ByO5bS2coM9CyaCwYyrE5qzYiyIfb+1BG3O5nVdDuN95sQ/0bAdBKlkqLFvFqFjVbETF0ri3v97w6MpUawfF75ouDrQ4xdaUOLLEWTso6VFJcM6Jg9bDl0FA0uLZUSDEHL
+|   2048 20:3d:2d:44:62:2a:b0:5a:9d:b5:b3:05:14:c2:a6:b2 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6afooTZ9mVUGFNEhkMoRR1Btzu64XXwElhCsHw/zVlIx/HXylNbb9+11dm2VgJQ21pxkWDs+L6+EbYyDnvRURTrMTgHL0xseB0EkNqexs9hYZSiqtMx4jtGNtHvsMxZnbxvVUk2dasWvtBkn8J5JagSbzWTQo4hjKMOI1SUlXtiKxAs2F8wiq2EdSuKw/KNk8GfIp1TA+8ccGeAtnsVptTJ4D/8MhAWsROkQzOowQvnBBz2/8ecEvoMScaf+kDfNQowK3gENtSSOqYw9JLOza6YJBPL/aYuQQ0nJ74Rr5vL44aNIlrGI9jJc2x0bV7BeNA5kVuXsmhyfWbbkB8yGd
+|   256 96:02:bb:5e:57:54:1c:4e:45:2f:56:4c:4a:24:b2:57 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMD46g67x6yWNjjQJnXhiz/TskHrqQ0uPcOspFrIYW382uOGzmWDZCFV8FbFwQyH90u+j0Qr1SGNAxBZMhOQ8pc=
+|   256 33:fa:91:0f:e0:e1:7b:1f:6d:05:a2:b0:f1:54:41:56 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILzVjfIyIHfXyRd8jVBaVT8Yvk/UvHh5Afvho8sGciG7
+80/tcp    open  http       syn-ack Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Go ahead and ScanMe!
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-favicon: Nmap Project
+2000/tcp  open  tcpwrapped syn-ack
+5060/tcp  open  tcpwrapped syn-ack
+9929/tcp  open  nping-echo syn-ack Nping echo
+31337/tcp open  tcpwrapped syn-ack
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May 22 09:39:55 2024 -- 4 IP addresses (2 hosts up) scanned in 323.90 seconds

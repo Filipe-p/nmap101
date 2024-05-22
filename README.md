@@ -49,7 +49,7 @@ $ nmap 192.168.1.0/29
 
 Scanning with pre set default setting to actually find anything use the `-A` flag:
 
-```python
+```bash
 # Using -A flag for seraral severs 
 $ nmap -A 45.33.32.156  
 
