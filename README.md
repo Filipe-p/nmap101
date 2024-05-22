@@ -88,6 +88,17 @@ Specific to host discovery there are different ways to performe this that wield 
 You can send "SYN" connects but you can also ping or do some other methods to find the host. More reading needed on this area. 
 Some also need Admin rights
 
+**Turning off host discovery when you know there is something there**
+
+```python
+# turning off host dicover
+$ nmap -Pn scan2.certmike.com
+
+# Verbose No host dicover + -A settings and storing the output in text file
+$ nmap -v -Pn -A -oN certmikr_scan2_NoHostDisc_-A_general-read.txt scan2.certmike.com
+
+```
+
 #### DNS
 
 By default nmap uses reverse DNS resolution. You can define a diferent one such as google's `8.8.8.8`, the machine DNS or other. This will affect the `performance of the scan`. It is an area that can be fined tuned to make your scans more efficients. 
