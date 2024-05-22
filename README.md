@@ -64,7 +64,7 @@ By default nmap uses reverse DNS resolution. You can define a diferent one such 
 
 Standard namp uses reverse DNS
 
-```bash
+```python
 
 # Standard reverse DNS look up
 $ nmap 45.33.32.156
@@ -100,7 +100,7 @@ There are over 65,0000 ports. 65,535 to be exact.
 It would be very time consuming to test all. By default Nmap test the most "1000" used ports.
 There are ways to specify a port
 
-```bash
+```python
 # Specify a port using -p
 nmap -p 80 45.33.32.156
 
