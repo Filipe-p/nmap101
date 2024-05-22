@@ -55,6 +55,7 @@ $ nmap -A 45.33.32.156
 
 # Very Verbose, -A preset common settings, output to readable text, multiple target list
 $ nmap -vv -A -oN certmikr_nampWEB_IP-A_general-read.txt -iL ~/code/nmap101/scans/scan_targets2.txt
+^^
 
 ```
 
