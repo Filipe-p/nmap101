@@ -49,13 +49,13 @@ $ nmap 192.168.1.0/29
 
 Scanning with pre set default setting to actually find anything use the `-A` flag:
 
-```bash
+```python
 # Using -A flag for seraral severs 
 $ nmap -A 45.33.32.156  
 
 # Very Verbose, -A preset common settings, output to readable text, multiple target list
 $ nmap -vv -A -oN certmikr_nampWEB_IP-A_general-read.txt -iL ~/code/nmap101/scans/scan_targets2.txt
-$ nmap -vv -A -oN certmikr_nampWEB_IP-A_general-read.txt -iL ~/code/nmap101/scans/scan_targets2.txt
+
 ```
 
 #### Multiple targets 
