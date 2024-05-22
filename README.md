@@ -31,6 +31,26 @@ $ sudo apt install nmap
 
 You can also built from source or install distro/OS specific https://nmap.org/download.html
 
+### Basics of  Networking TCP handshakes and UDP
+
+**TCP**
+Main way of transfering data is TPC. Transmission Control Protocol (TPC) acknologes delivery of packages and hence is a reliable protocol commonly used. 
+It has these main requests whene establishing a or closing a connection:
+
+- SYN - Opens a connection
+- ACK - Acknologes a SYN or FIN 
+- FIN - Closes a connection
+
+
+ ![alt text](./image.png)
+
+**UDP**
+UDP is also used for data tranfering, but does so blindly. It doesn not acknologe anything! 
+It is there for less comonly used and harder to ensure that or anything was received as inteded.
+
+**OSI Model**
+
+
 
 ### Basic Usage
 
