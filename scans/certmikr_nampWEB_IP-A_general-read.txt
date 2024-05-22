@@ -1,0 +1,3 @@
+# Nmap 7.95 scan initiated Wed May 22 09:34:31 2024 as: nmap -vv -A -oN certmikr_nampWEB_IP-A_general-read.txt -iL /Users/ctw03699/code/nmap101/scans/scan_targets2.txt
+Nmap scan report for scan2.certmike.com (18.213.123.154) [host down, received no-response]
+Nmap scan report for scan3.certmike.com (18.213.203.4) [host down, received no-response]

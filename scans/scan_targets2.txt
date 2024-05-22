@@ -1,0 +1,4 @@
+scan1.certmike.com
+scan2.certmike.com
+scan3.certmike.com
+45.33.32.156
